@@ -58,6 +58,7 @@
 
 - (SKStack *)currentStack
 {
+    // TODO: We should have some sort of logic to load a default stack, if none is set
     if (!_currentStack) {
         _currentStack = [NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:[self userDefaultsStorageKey]]];
     }
