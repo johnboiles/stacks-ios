@@ -1,0 +1,10 @@
+target 'stacks-ios', :exclusive => true do
+  pod "stacks-ios", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "stacks-ios", :path => "../"
+
+  pod 'Specta', '~> 0.2.1'
+  pod 'Expecta'
+end
