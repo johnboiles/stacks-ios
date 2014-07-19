@@ -12,7 +12,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // SKStackManager's App ID must be set before any network requests are made
+    [[SKStackManager sharedStackManager] setAppId:@"35Gh4YFId7u4vzkdutwzjx"];
     return YES;
 }
 							

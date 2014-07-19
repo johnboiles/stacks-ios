@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SKStackManager.h>
 
 @interface SKAppDelegate : UIResponder <UIApplicationDelegate>
 
