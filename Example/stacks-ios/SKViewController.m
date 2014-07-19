@@ -12,7 +12,11 @@
 #import <SKStack.h>
 
 @interface SKViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *hostLabel;
+@property (weak, nonatomic) IBOutlet UILabel *idLabel;
+@property (weak, nonatomic) IBOutlet UILabel *appIdLabel;
+@property (weak, nonatomic) IBOutlet UILabel *groupLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *URLLabel;
 
 @end
 
@@ -21,7 +25,12 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.hostLabel.text = [SKStackManager sharedStackManager].currentStack.URLString;
+    SKStack *currentStack = [SKStackManager sharedStackManager].currentStack;
+    self.idLabel.text = currentStack.URLString;
+    self.appIdLabel.text = currentStack.appId;
+    self.groupLabel.text = currentStack.group;
+    self.nameLabel.text = currentStack.name;
+    self.URLLabel.text = currentStack.URLString;
 }
 
 - (IBAction)showStackSelection:(id)sender {

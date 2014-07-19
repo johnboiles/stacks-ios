@@ -23,13 +23,12 @@
 
 @interface SKStackManager : NSObject
 
+// TODO: Allow for multiple delegates in SKStackManager (see: http://stackoverflow.com/questions/9336288/nsarray-of-weak-references-to-objects-under-arc)
 @property (weak, nonatomic) id<SKStackManagerDelegate> delegate;
 @property (strong, nonatomic) NSString *appId;
 @property (strong, nonatomic) SKStack *currentStack;
 
 + (SKStackManager *)sharedStackManager;
-
-+ (NSURL *)host;
 
 + (NSString *)hostString;
 

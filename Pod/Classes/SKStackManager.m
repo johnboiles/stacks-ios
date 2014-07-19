@@ -32,11 +32,6 @@
     return SharedStackManager;
 }
 
-+ (NSURL *)host
-{
-    return [SKStackManager sharedStackManager].currentStack.URL;
-}
-
 + (NSString *)hostString
 {
     return [SKStackManager sharedStackManager].currentStack.URLString;
